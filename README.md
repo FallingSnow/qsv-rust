@@ -19,3 +19,7 @@ Build:
 Run:
 
      cargo run input.yuv out.h264 1920 1080 6000
+
+
+> https://community.intel.com/t5/Media-Intel-oneAPI-Video/Getting-MFX-ERR-INVALID-VIDEO-PARAM-from-MFXVideoDECODE-Init/m-p/923563
+> Use `async_depth = 1` and `num_thread = 1` to decrease latency.

@@ -3,7 +3,10 @@ name = "qsv-rust"
 version = "0.1.0"
 authors = ["Jozsef Vass <jozsef@discordapp.com>"]
 edition = "2018"
-build = "build.rs"
 
 [dependencies]
 libc = "0.2"
+
+[build-dependencies]
+bindgen = "0.64.0"
+pkg-config = "0.3.26"
