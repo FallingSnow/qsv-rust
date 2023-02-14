@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'qsv-rust'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=qsv-rust",
+                    "--package=qsv-rust"
+                ],
+                "filter": {
+                    "name": "qsv-rust",
+                    "kind": "bin"
+                }
+            },
+            "args": ["/tmp/vid.yuv", "/mnt/mfx.h264", "1920", "1080", "6000"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'qsv-rust'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=qsv-rust",
+                    "--package=qsv-rust"
+                ],
+                "filter": {
+                    "name": "qsv-rust",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
